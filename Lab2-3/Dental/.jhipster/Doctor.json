@@ -1,0 +1,62 @@
+{
+  "name": "Doctor",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "tel",
+      "fieldType": "Long",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "address",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "specialization",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "departmentID",
+      "fieldType": "Long",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "patient",
+      "otherEntityRelationshipName": "doctors",
+      "relationshipName": "pacients"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "department",
+      "otherEntityRelationshipName": "docrors",
+      "relationshipName": "departments"
+    }
+  ],
+  "changelogDate": "20200526091819",
+  "entityTableName": "doctor",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,39 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.denysiuk.dental"
+    },
+    "jhipsterVersion": "6.9.0",
+    "applicationType": "monolith",
+    "baseName": "Dental",
+    "packageName": "com.denysiuk.dental",
+    "packageFolder": "com/denysiuk/dental",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ZTI1OGNmZWUxZTVhNmE4OGU3OGQzZjQyNGU1NWE0YzI0NDI5ZDI4Yzg5Zjc5YzIwN2M4ZTkwNGJlYjgyM2ViZmQ0MDk0ZWYwNzliYjNkYmE5YzM4MTJkZDhmYTEwNzk2ODgzZDg2OWMzZjgwZjdkYTA4OWNlM2M2NWZiY2MzZGU=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "minty",
+    "clientThemeVariant": "dark",
+    "creationTimestamp": 1590483214362,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}

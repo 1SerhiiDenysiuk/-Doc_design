@@ -1,0 +1,61 @@
+{
+  "name": "Patient",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "tel",
+      "fieldType": "Long",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "address",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "age",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "sex",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "doctorID",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "treatment",
+      "otherEntityRelationshipName": "patients",
+      "relationshipName": "treatments"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "doctor",
+      "otherEntityRelationshipName": "pacients",
+      "relationshipName": "doctors",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200526091719",
+  "entityTableName": "patient",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

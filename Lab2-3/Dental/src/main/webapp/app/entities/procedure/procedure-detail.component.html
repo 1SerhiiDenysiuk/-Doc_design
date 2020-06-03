@@ -1,0 +1,40 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="procedure">
+            <h2><span>Procedure</span> {{ procedure.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span>Name</span></dt>
+                <dd>
+                    <span>{{ procedure.name }}</span>
+                </dd>
+                <dt><span>Price</span></dt>
+                <dd>
+                    <span>{{ procedure.price }}</span>
+                </dd>
+                <dt><span>Treatments</span></dt>
+                <dd>
+                    <div *ngIf="procedure.treatments">
+                        <a [routerLink]="['/treatment', procedure.treatments?.id, 'view']">{{ procedure.treatments?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/procedure', procedure.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

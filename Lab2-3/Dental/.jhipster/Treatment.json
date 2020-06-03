@@ -1,0 +1,39 @@
+{
+  "name": "Treatment",
+  "fields": [
+    {
+      "fieldName": "patientID",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "procedure",
+      "otherEntityRelationshipName": "treatments",
+      "relationshipName": "procedures"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "patient",
+      "otherEntityRelationshipName": "treatments",
+      "relationshipName": "patients",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200526092019",
+  "entityTableName": "treatment",
+  "dto": "no",
+  "pagination": "infinite-scroll",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Department",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "doctor",
+      "otherEntityRelationshipName": "departments",
+      "relationshipName": "docrors",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200526091919",
+  "entityTableName": "department",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

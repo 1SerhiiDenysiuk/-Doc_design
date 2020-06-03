@@ -1,0 +1,53 @@
+entity Patient {
+	ID Long
+    name String required
+    tel	Long required
+    address String
+    age Long
+    sex String
+    doctorID Long
+}
+
+entity Doctor {
+	id Long
+    name String required
+    tel	Long required
+    address String
+    specialization String required
+    departmentID Long required
+}
+
+entity Department {
+	id Long
+    name String required
+}
+
+
+entity Treatment {
+	id Long
+    patientID Long
+    date ZonedDateTime
+}
+
+entity Procedure {
+	id Long
+    name String required
+    price Long
+}
+
+
+
+
+relationship OneToMany {
+	Doctor{pacients} to Patient{doctors}
+    Patient{treatments} to Treatment{patients}
+    Doctor{departments} to Department{docrors}
+    Treatment{procedures} to Procedure{treatments}
+}
+
+
+filter Treatment, Procedure
+paginate Treatment, Procedure with infinite-scroll
+
+service all with serviceImpl
+
